@@ -26,6 +26,20 @@ var events = allEvents{
 	},
 }
 
+// @title           Swagger API-Event
+// @version         1.0
+// @description     Documentação da API de eventos.
+// @termsOfService  http://swagger.io/terms/
+
+// @contact.name   API-Event Support
+// @contact.url    http://www.swagger.io/support
+// @contact.email  support@swagger.io
+
+// @license.name  Apache 2.0
+// @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
+
+// @host      https://new-api-events-16041.herokuapp.com/
+
 func main() {
 	log.Println("Starting API")
 	port := os.Getenv("PORT")
@@ -46,6 +60,15 @@ func HealtCheck(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	fmt.Fprintf(w, "Aplicação em Funcionando!\n")
 }
+
+// ShowAllEvents godoc
+// @Summary      Show all events
+// @Description  List all events
+// @Tags         events
+// @Accept       json
+// @Produce      json
+// @Success      200  {object}  Event
+// @Router       /events [get]
 
 func GetAllEvents(w http.ResponseWriter, r *http.Request) {
 	log.Println("acessando o endpoint get all events")
