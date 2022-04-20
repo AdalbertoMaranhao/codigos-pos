@@ -21,7 +21,7 @@ type allEvents []Event
 var events = allEvents{
 	{
 		Id:          1,
-		Title:       "APIs",
+		Title:       "apis",
 		Description: "Testando os eventos",
 	},
 }
